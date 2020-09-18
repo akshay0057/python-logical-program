@@ -1,0 +1,9 @@
+def arrRot(arr, n, d):
+    temp = arr[d%n:] + arr[:d%n]
+    return  temp
+
+n = int(input())
+arr = [int(x) for x in input().split()]
+d = int(input())
+arr = arrRot(arr, n, d)
+print(*arr)
