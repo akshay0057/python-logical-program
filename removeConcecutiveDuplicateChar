@@ -1,0 +1,8 @@
+str = input('Enter a string : ')
+i = 0
+while i < len(str) - 1:
+    if str[i] == str[i+1]:
+        str = str.replace(str[i]*2, str[i])
+    else:
+        i = i + 1
+print(str)
