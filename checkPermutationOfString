@@ -1,0 +1,13 @@
+string1 = input('String1 : ')
+string2 = input('string2 : ')
+
+#isPermutation = True
+if len(string1) ==  len(string2):
+    for char in string1:
+        if (char not in string2) or (string1.count(char) != string2.count(char)):
+            print('false')
+            break
+    else:
+        print('true')
+else:
+    print('false')
