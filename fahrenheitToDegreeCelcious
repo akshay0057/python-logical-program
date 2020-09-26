@@ -1,0 +1,27 @@
+'''DESCRYPTION : This program take input as range of Fahrenheit value(startF to endF) and convert it into degree celcious at after each steps 
+0
+100
+20
+0   -17
+20   -6
+40   4
+60   15
+80   26
+100   37
+'''
+
+
+startF = int(input())
+endF = int(input())
+steps = int(input())
+
+faht = startF
+while faht <= endF:
+    if faht < 32:
+        degreeCelcious = ((faht - 32) * 5 // 9) + 1
+    elif faht > 32:
+        degreeCelcious = (faht - 32) * 5 // 9
+    else:
+        degreeCelcious = 0
+    print(faht," ",degreeCelcious)
+    faht = faht + steps
