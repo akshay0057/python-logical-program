@@ -1,0 +1,35 @@
+print('********** CALCULATOR FOR TWO NUMBER **********')
+print('1. Addition')
+print('2. Substraction')
+print('3. Multiplication')
+print('4. Division')
+print('5. Modulus')
+print('6. Exit')
+
+condition = True
+while condition:
+    choice = int(input('Enter choice : '))
+    if choice == 1:
+        num1 = int(input())
+        num2 = int(input())
+        print(num1 + num2)
+    elif choice == 2:
+        num1 = int(input())
+        num2 = int(input())
+        print(num1 - num2)
+    elif choice == 3:
+        num1 = int(input())
+        num2 = int(input())
+        print(num1 * num2)
+    elif choice == 4:
+        num1 = int(input())
+        num2 = int(input())
+        print(num1 // num2)
+    elif choice == 5:
+        num1 = int(input())
+        num2 = int(input())
+        print(num1 % num2)
+    elif choice == 6:
+        condition = False
+    else:
+        print('Invalid Operation')
