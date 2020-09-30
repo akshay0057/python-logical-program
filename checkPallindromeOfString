@@ -1,0 +1,8 @@
+string = input()
+revString = ''
+for i in range(len(string)-1, -1, -1):
+    revString = revString + string[i]
+if revString == string:
+    print('true')
+else:
+    print('false')
