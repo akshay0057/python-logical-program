@@ -1,0 +1,17 @@
+string = input()
+i = 0
+count = 0
+newStr = ''
+while i < len(string)-1:
+    if string[i] == string[i+1]:
+        count = count + 1
+    else:
+        if count != 0:
+            newStr = newStr + string[i] + str(count+1)
+        else:
+            newStr = newStr + string[i]
+        count = 0
+    i = i + 1
+if string[i] != string[i-1]:
+    newStr = newStr + string[i]
+print(newStr)
