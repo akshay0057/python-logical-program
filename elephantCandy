@@ -1,0 +1,10 @@
+noOfTestCase = int(input())
+for i in range(noOfTestCase):
+    noOfElephant, noOfCandies = input().split()
+    noOfElephant = int(noOfElephant)
+    noOfCandies = int(noOfCandies)
+    arr = [int(x) for x in input().split()]
+    if sum(arr) <= noOfCandies:
+        print('Yes')
+    else:
+        print('No')
