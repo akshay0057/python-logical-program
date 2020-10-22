@@ -1,0 +1,28 @@
+def arr_str_int(arr):
+    string = ''
+    for s in arr:
+        string = string + str(s)
+    return int(string)
+
+
+def sumOfTwoArrays(arr1, n, arr2, m, output):
+    length = len(output) - 1
+    num1 = arr_str_int(arr1)
+    num2 = arr_str_int(arr2)
+    sumOfNum1Num2 = num1 + num2
+    while sumOfNum1Num2 > 0:
+        r = sumOfNum1Num2 % 10
+        output[length] = r
+        sumOfNum1Num2 //= 10
+        length -= 1
+        
+        
+n = int(input())
+m = int(input())
+outputSize = max(n, m) + 1
+output = outputSize * [0]
+arr1 = [int(x) for x in input().split()]
+arr2 = [int(x) for x in input().split()]
+sumOfTwoArrays(arr1, n, arr2, m, output)
+print(output)
+        
