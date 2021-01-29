@@ -1,0 +1,21 @@
+# Enter number of rows
+n = int(input())
+ans = [[0 for i in range(n)] for j in range(n)] # 2D Matrix which help in printing pattern
+
+k = 1
+# Logic for put value into the 2D matrix pattern
+for col in range(n):
+    for row in range(n):
+        # If row >= col, then we insert value in the matrix
+        if row >= col:
+            ans[row][col] = k
+            k += 1
+        else:
+            ans[row][col] = 0
+
+# Printing the Pattern
+for i in range(n):   # Loop for rows
+    for j in range(n):  # Loop for columns
+        if ans[i][j] != 0:
+            print(ans[i][j], end = ' ')
+    print()
