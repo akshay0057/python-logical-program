@@ -1,0 +1,11 @@
+string = input()
+lst = list(map(str, string.split()))
+length = len(lst)
+if length % 2 == 1:
+    mid = length // 2
+    print(len(lst[mid]))
+else:
+    mid1 = length // 2
+    mid2 = mid1 -1
+    print(max(len(lst[mid1]), len(lst[mid2])))
+
